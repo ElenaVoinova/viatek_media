@@ -1,0 +1,685 @@
+@import "https://fonts.fontstorage.com/import/mplus1p.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1472px;
+  width: 80%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.btn {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0B1B23;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+}
+.btn .span {
+  font-family: "M PLUS 1p";
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: normal;
+  white-space: nowrap;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::before {
+  content: "";
+  animation: colorToBlue 1s forwards;
+}
+.btn:not(:hover)::before {
+  animation: colorToTransparent 0.5s forwards;
+}
+.btn::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #2CB4FE;
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  z-index: 0;
+  transition: 1s ease;
+}
+
+@keyframes colorToBlue {
+  0% {
+    background: #2CB4FE;
+    transform: scale(0);
+  }
+  100% {
+    background-color: #2CB4FE;
+    transform: scale(40);
+  }
+}
+@keyframes colorToTransparent {
+  0% {
+    background: #2CB4FE;
+    transform: scale(40);
+  }
+  100% {
+    background-color: #2CB4FE;
+    transform: scale(0);
+  }
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.list .dropbtn {
+  color: #ffffff;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+}
+@media (max-width: 1441px) {
+  .list .dropbtn {
+    padding: 20px 10px 20px 20px;
+  }
+}
+.list .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.list .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 170%;
+  padding: 10px 50px 10px 10px;
+  background-color: #122D3B;
+  min-width: 242px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  white-space: nowrap;
+}
+.list .dropdown-content a {
+  color: #ffffff;
+  padding: 15px 10px;
+  text-decoration: none;
+  display: block;
+}
+.list .dropdown-content a:hover {
+  color: #2CB4FE;
+}
+.list .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main {
+  background-image: url(/images/bg_img_main.svg);
+  background-color: #0B1B23;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 45px 250px 25px rgb(11, 27, 35) inset;
+}
+@media (max-width: 1681px) {
+  .main {
+    background-position-x: right;
+  }
+}
+@media (max-width: 1601px) {
+  .main {
+    background-position-x: right;
+  }
+}
+@media (max-width: 1441px) {
+  .main {
+    background-position-x: right;
+  }
+}
+.main .header {
+  padding: 50px 0;
+}
+@media (max-width: 1441px) {
+  .main .header {
+    padding: 30px 0;
+  }
+}
+.main .header .row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 {
+    gap: 10px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+.main .header .row1 .elem1 {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  gap: 20px;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem1 {
+    gap: 10px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 {
+    justify-content: center;
+    flex: none;
+  }
+}
+.main .header .row1 .elem1 .logo {
+  background-color: #2CB4FE;
+  white-space: nowrap;
+  font-weight: 900;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+}
+.main .header .row1 .elem1 .logo .logoImg {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #F5F7FA;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main .header .row1 .elem1 .logoName {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+.main .header .row1 .elem1 .logoName .span2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #ffffff;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem1 .logoName .span2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1601px) {
+  .main .header .row1 .elem1 .logoName .span2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 .logoName .span2 {
+    font-size: 21px;
+  }
+}
+.main .header .row1 .elem1 .logoName .span3 {
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem1 .logoName .span3 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1601px) {
+  .main .header .row1 .elem1 .logoName .span3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 .logoName {
+    margin-right: 50px;
+  }
+}
+.main .header .row1 .elem1 .address {
+  margin-left: 20px;
+  position: relative;
+}
+.main .header .row1 .elem1 .address .addressText {
+  font-family: "M PLUS 1p";
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #ffffff;
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 .address .addressText {
+    font-size: 12px;
+    letter-spacing: none;
+  }
+}
+.main .header .row1 .elem1 .address::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -18%;
+  height: 60px;
+  width: 1px;
+  background-color: #ffffff;
+  margin-left: -20px;
+}
+@media (min-width: 1601px) {
+  .main .header .row1 .elem1 .address::before {
+    margin-left: -15px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 .address::before {
+    margin-left: -32px;
+  }
+}
+@media (max-width: 1153px) {
+  .main .header .row1 .elem1 .address::before {
+    margin-left: -33px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem1 .address {
+    margin-left: 5px;
+  }
+}
+.main .header .row1 .elem2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1;
+  gap: 20px;
+}
+.main .header .row1 .elem2 .list .phones {
+  width: 250px;
+}
+.main .header .row1 .elem2 .list .phones .phoneMain {
+  align-self: flex-end;
+  font-family: "M PLUS 1p";
+  font-size: 20px;
+  font-weight: 400;
+  padding: 15px;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem2 .list .phones .phoneMain {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1601px) {
+  .main .header .row1 .elem2 .list .phones .phoneMain {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+.main .header .row1 .elem2 .list .phones .phone2 {
+  font-family: "M PLUS 1p";
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem2 .list .phones .phone2 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1601px) {
+  .main .header .row1 .elem2 .list .phones .phone2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem2 .list .phones {
+    width: 210px;
+  }
+}
+.main .header .row1 .elem2 .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main .header .row1 .elem2 .links .linkProperty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: #7095AA;
+  background-color: #0B1B23;
+}
+.main .header .row1 .elem2 .links .linkWhatsApp:hover {
+  color: #ffffff;
+  background-color: #3ADC49;
+}
+.main .header .row1 .elem2 .links .linkTelegram:hover {
+  color: #ffffff;
+  background-color: #2CB4FE;
+}
+.main .header .row1 .elem2 .links .linkVk:hover {
+  color: #ffffff;
+  background-color: #548CF6;
+}
+.main .header .row1 .elem2 .links .linkOdn:hover {
+  color: #ffffff;
+  background-color: #F79418;
+}
+@media (max-width: 1681px) {
+  .main .header .row1 .elem2 .links {
+    gap: 10px;
+  }
+}
+@media (min-width: 1441px) {
+  .main .header .row1 .elem2 .links {
+    gap: 20px;
+  }
+}
+@media (max-width: 1441px) {
+  .main .header .row1 .elem2 {
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 60px;
+  }
+}
+.main .header .row2 .nav {
+  background-color: #0B1B23;
+  border-radius: 5px;
+  padding: 20px 0px;
+}
+.main .header .row2 .nav .list {
+  display: flex;
+  justify-content: space-around;
+  font-family: "M PLUS 1p";
+  font-weight: 500;
+  font-size: 15px;
+}
+.main .header .row2 .nav .list .btnNav {
+  width: 120px;
+  background-color: #0B1B23;
+  border-radius: 5px;
+  border: none;
+}
+.main .header .row2 .nav .list .btnNav:hover::before {
+  content: "";
+  animation: colorBlue 0.5s forwards;
+}
+.main .header .row2 .nav .list .btnNav:not(:hover)::before {
+  animation: colorTransparent 0.5s forwards;
+}
+.main .header .row2 .nav .list .btnNav::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #2CB4FE;
+  border-radius: 40%;
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  z-index: 0;
+  transition: 0.1s ease;
+}
+.main .header .row2 .nav .list .btnNav .arrowDown {
+  align-self: center;
+}
+.main .header .row2 .nav .list .btnNav .dropdown-content {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  padding: 20px 50px 20px 10px;
+}
+@media (max-width: 1281px) {
+  .main .header .row2 .nav .list .btnNav {
+    width: 100px;
+  }
+}
+@keyframes colorBlue {
+  0% {
+    background: #2CB4FE;
+    transform: scale(0);
+  }
+  100% {
+    background-color: #2CB4FE;
+    transform: scale(10);
+  }
+}
+@keyframes colorTransparent {
+  0% {
+    background: #2CB4FE;
+    transform: scale(10);
+  }
+  100% {
+    background-color: #2CB4FE;
+    transform: scale(0);
+  }
+}
+.main .header .row2 .nav .list .link {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  color: #ffffff;
+  cursor: pointer;
+}
+.main .header .row2 .nav .list .link:hover {
+  color: #2CB4FE;
+  transition: 5s ease;
+}
+.main .header .row2 .nav .list .drop {
+  font-family: "M PLUS 1p";
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.main .header .row2 .nav .list .item {
+  position: relative;
+}
+.main .header .row2 .nav .list .item .icoMenu {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  right: -30px;
+  stroke: #ffffff;
+}
+.main .header .row2 .nav .list .item .icoMenu:hover {
+  stroke: #2CB4FE;
+}
+@media (max-width: 1441px) {
+  .main .header .row2 .nav .list .item .icoMenu {
+    right: -20px;
+  }
+}
+@media (max-width: 1281px) {
+  .main .header .row2 .nav .list .item .icoMenu {
+    right: -10px;
+  }
+}
+@media (max-width: 1281px) {
+  .main .header .row2 .nav {
+    gap: 5px;
+    font-size: 13px;
+  }
+}
+.main .promo .content .promoHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+@media (max-width: 1441px) {
+  .main .promo .content .promoHeader {
+    padding: 30px;
+    gap: 30px;
+  }
+}
+.main .promo .content .promoHeader .headerMain {
+  font-family: "Raleway", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 50%;
+}
+@media (max-width: 1441px) {
+  .main .promo .content .promoHeader .headerMain {
+    font-size: 72px;
+  }
+}
+.main .promo .content .promoHeader .headerMiddle {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 45%;
+}
+@media (max-width: 1441px) {
+  .main .promo .content .promoHeader .headerMiddle {
+    font-size: 36px;
+    padding: 30px 0px;
+  }
+}
+.main .promo .content .buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 0px 95px 0px;
+}
+@media (max-width: 1441px) {
+  .main .promo .content .buttons {
+    padding: 20px 0 40px 0;
+  }
+}
+.main .promo .content .buttons .linkCta {
+  align-self: center;
+  overflow: hidden;
+  position: relative;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 30px;
+  background-color: #2CB4FE;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.main .promo .content .buttons .linkCta .spanPromo {
+  font-family: "M PLUS 1p";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.main .promo .content .buttons .linkCta .spanPromo:hover {
+  color: #2CB4FE;
+}
+.main .promo .content .buttons .linkCta:hover::before {
+  content: "";
+  animation: colorToWhite 1s forwards;
+}
+.main .promo .content .buttons .linkCta:not(:hover)::before {
+  animation: colorToBlueLight 0.5s forwards;
+}
+.main .promo .content .buttons .linkCta::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -55%;
+  left: 25%;
+  z-index: 0;
+  transition: 1s ease;
+}
+@keyframes colorToWhite {
+  0% {
+    background-color: #ffffff;
+    transform: scale(0);
+  }
+  100% {
+    background-color: #ffffff;
+    transform: scale(40);
+  }
+}
+@keyframes colorToBlueLight {
+  0% {
+    background-color: #ffffff;
+    transform: scale(40);
+  }
+  100% {
+    background-color: #ffffff;
+    transform: scale(0);
+  }
+}
+.main .promo .content .buttons .btns {
+  display: flex;
+  gap: 15px;
+}
+.main .promo .content .buttons .btns .counter {
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.main .promo .content .buttons .btns .btnArrowBack::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-image: url("/images/arrow_back.svg");
+  background-color: #CECECE;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.main .promo .content .buttons .btns .btnArrowNext::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-image: url("/images/arrow_next.svg");
+  background-color: #CECECE;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.main .promo .content .buttons .btns .btnArrowBack:hover::before,
+.main .promo .content .buttons .btns .btnArrowNext:hover::before {
+  background-color: #2CB4FE;
+  border-color: #2CB4FE;
+}/*# sourceMappingURL=style.css.map */
